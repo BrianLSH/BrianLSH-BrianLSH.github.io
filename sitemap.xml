@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/JavaScript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2020-08-21T09:08:14.113Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/wiki/JavaScript-%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80/</loc>
     
-    <lastmod>2020-08-18T14:36:13.505Z</lastmod>
+    <lastmod>2020-08-18T15:53:41.397Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/wiki/JavaScript-this/</loc>
     
-    <lastmod>2020-08-17T09:53:42.019Z</lastmod>
+    <lastmod>2020-08-18T15:53:30.156Z</lastmod>
     
   </url>
   
@@ -145,13 +152,6 @@
     <loc>http://yoursite.com/wiki/Jquery%E5%92%8Cvue%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2020-08-05T09:04:58.279Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/wiki/JavaScript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
-    
-    <lastmod>2020-08-05T09:04:51.167Z</lastmod>
     
   </url>
   
