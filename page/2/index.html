@@ -344,6 +344,33 @@
                     </li> 
                      </ul> 
                     </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            测试
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            测试
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            在测试
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E6%88%91%E6%98%AF%E6%B5%8B%E8%AF%95%E7%9A%84/">测试一把</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
                      <li class="file"><a href="/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8E%9F%E7%90%86%E4%B8%8E%E7%BD%91%E7%BB%9C/">计算机原理与网络</a></li>  </ul> 
     </div>
     <script>
@@ -416,6 +443,99 @@
 </aside>
             
             <section id="main">
+        <article id="post-vue的样式穿透" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Vue/">Vue</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue/%E5%9F%BA%E7%A1%80/">基础</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Vue-%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F-%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">Vue 样式穿透 深度作用域</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/vue%E7%9A%84%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/">
+            <time datetime="2019-08-30T16:00:00.000Z" itemprop="datePublished">2019-08-31</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/vue的样式穿透.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/vue的样式穿透.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/vue的样式穿透.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/vue%E7%9A%84%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/">vue的样式穿透</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <h3 id="vue深度作用域"><a href="#vue深度作用域" class="headerlink" title="vue深度作用域"></a>vue深度作用域</h3><h4 id="vue有-在有作用域样式的组建中，默认只能对作用域组件的根节点进行生效"><a href="#vue有-在有作用域样式的组建中，默认只能对作用域组件的根节点进行生效" class="headerlink" title="vue有 在有作用域样式的组建中，默认只能对作用域组件的根节点进行生效"></a>vue有 在有作用域样式的组建中，默认只能对作用域组件的根节点进行生效</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;根组件&gt;</span><br><span class="line">    &lt;子组件&gt;</span><br><span class="line">        &lt;子子组件&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;/子子组件 <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;a&quot;</span>&gt;</span><br><span class="line">    &lt;/子组件&gt;</span><br><span class="line">&lt;/根组件&gt;</span><br><span class="line"></span><br><span class="line">此时 样式a只能作用在根节点组件,要想作用在子组件可用以下解决办法。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span>脱离作用域，去掉scoped 但是容易和其他组件样式冲突</span><br><span class="line"><span class="number">2.</span> /deep/<span class="string">` 或者 `</span>::v-deep<span class="string">`  &gt;&gt;&gt;</span></span><br><span class="line"><span class="string">详细见文档----&gt; loader ---&gt;作用域样式 深度作用域</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/deep/ .abc &#123;</span><br><span class="line">   <span class="selector-tag">position</span>: <span class="selector-tag">fixed</span>;</span><br><span class="line">     <span class="selector-tag">margin</span>：10<span class="selector-tag">px</span>;</span><br><span class="line">     <span class="selector-tag">padding</span>: 20<span class="selector-tag">px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-JavaScript-箭头函数与普通函数的区别" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1151,87 +1271,6 @@
         
         
             <h3 id="Vue-中-插件使用"><a href="#Vue-中-插件使用" class="headerlink" title="Vue 中 插件使用"></a>Vue 中 插件使用</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 下载 npm install xxx</span><br><span class="line"><span class="number">2.</span> 引入 <span class="keyword">import</span> xx from <span class="string">&#x27;xxxx&#x27;</span> Vue.use(xxx)</span><br><span class="line">3. 配置 &lt;xx v-model=&#x27;xx&#x27; select=&#x27;xx&#x27;&gt;&lt;/xx&gt;</span><br></pre></td></tr></table></figure>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-vue中-route和-router的区别" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Vue/">Vue</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue/%E5%9F%BA%E7%A1%80/">基础</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/Vue-route-router/" rel="tag">Vue $route $router</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/vue%E4%B8%AD-route%E5%92%8C-router%E7%9A%84%E5%8C%BA%E5%88%AB/">
-            <time datetime="2018-08-01T16:00:00.000Z" itemprop="datePublished">2018-08-02</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/vue中-route和-router的区别.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/vue中-route和-router的区别.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/vue中-route和-router的区别.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/vue%E4%B8%AD-route%E5%92%8C-router%E7%9A%84%E5%8C%BA%E5%88%AB/">vue中$route和$router的区别</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-            
-        
-        
-            <h3 id="route和-router的区别"><a href="#route和-router的区别" class="headerlink" title="$route和$router的区别"></a>$route和$router的区别</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$router为vueRouter的实例，相当于一个全局路由对象，里面含有很多属性和子对象 </span><br><span class="line">$route相当于当前正在跳转的路由对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
