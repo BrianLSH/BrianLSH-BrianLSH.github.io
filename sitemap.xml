@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE--%E6%A5%BC%E5%B8%82%E6%97%A9%E8%AE%AFapp/</loc>
+    
+    <lastmod>2020-09-10T03:01:21.652Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/wiki/vue%E4%B8%ADkeep-alive%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
+    
+    <lastmod>2020-09-10T02:58:50.893Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/wiki/vue%E7%BB%84%E4%BB%B6%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</loc>
     
-    <lastmod>2020-08-22T14:46:01.045Z</lastmod>
+    <lastmod>2020-08-22T16:14:00.511Z</lastmod>
     
   </url>
   
@@ -257,13 +271,6 @@
     <loc>http://yoursite.com/wiki/vue%E4%B8%ADNextTick%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%9A%84/</loc>
     
     <lastmod>2020-08-05T08:57:26.466Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/wiki/vue%E4%B8%ADkeep-alive%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
-    
-    <lastmod>2020-08-05T08:57:25.043Z</lastmod>
     
   </url>
   
