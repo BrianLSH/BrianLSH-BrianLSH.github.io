@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>表单验证 | Never Too Old To Learn</title>
+    
+    
+        <meta name="keywords" content="Vue 项目 表单验证" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="表单验证1234567891011121314151617181920212223242526272829303132333435&lt;div class&#x3D;&amp;#x27;login&amp;#x27;&gt;     &lt;!-- 使用elementUI组件 el-card --&gt;    &lt;el-card class&#x3D;&quot;login-card&quot;&gt;        &amp;lt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单验证">
+<meta property="og:url" content="http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/index.html">
+<meta property="og:site_name" content="Never Too Old To Learn">
+<meta property="og:description" content="表单验证1234567891011121314151617181920212223242526272829303132333435&lt;div class&#x3D;&amp;#x27;login&amp;#x27;&gt;     &lt;!-- 使用elementUI组件 el-card --&gt;    &lt;el-card class&#x3D;&quot;login-card&quot;&gt;        &amp;lt">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-04-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-09-20T11:03:50.308Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Vue 项目 表单验证">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Never Too Old To Learn" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">Never Too Old To Learn</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            CSS
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/CSS--%E5%9F%BA%E7%A1%80/">CSS基础</a></li>  <li class="file"><a href="/wiki/CSS-%E8%A1%8C%E9%AB%98/">CSS行高设置</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            案例
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/CSS-%E5%B0%8F%E6%A1%88%E4%BE%8B/">CSS案例</a></li>  <li class="file"><a href="/wiki/CSS%E5%8A%A8%E7%94%BB%E4%B9%8B%E5%B9%BD%E7%81%B5%E6%8C%89%E9%92%AE/">动画--幽灵按钮</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Es6
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/Es6-%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1/">回调地狱</a></li>  <li class="file"><a href="/wiki/Es6-Promise/">Promise</a></li>  <li class="file"><a href="/wiki/Es6-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">本地存储使用场景</a></li>  <li class="file"><a href="/wiki/Es6-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%BF%85%E5%A4%87/">Es6--工作用到的</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            JavaScript
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/JavaScript-%E6%95%B0%E6%8D%AE%E5%9F%BA%E7%A1%80/">JavaScript-基础</a></li>  <li class="file"><a href="/wiki/JavaScript-this/">JavaScript-this</a></li>  <li class="file"><a href="/wiki/JavaScript-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">JavaScript-面向对象</a></li>  <li class="file"><a href="/wiki/JavaScript-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%B8%8E%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/">JavaScript-箭头函数与普通函数的区别</a></li>  <li class="file"><a href="/wiki/JavaScript-%E9%97%AD%E5%8C%85/">JavaScript-闭包</a></li>  <li class="file"><a href="/wiki/Jquery%E5%92%8Cvue%E5%8C%BA%E5%88%AB/">Jquery和vue区别</a></li>  <li class="file"><a href="/wiki/JavaScript-%E8%B7%A8%E5%9F%9F/">JavaScript-跨域</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Linux
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            命令
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/Linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">linux-常用命令</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PHP
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/PHP-%E5%9F%BA%E7%A1%80/">php基础</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            框架
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Laravel
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/PHP-Laravel%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Laravel常用命令</a></li>  <li class="file"><a href="/wiki/PHP-Laravel-CURD%E5%B0%8F%E7%BB%93/">Laravel-CURD小结</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            Vue
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/Vue%E6%8F%92%E6%A7%BD%E8%AF%A6%E8%A7%A3/">Vue插槽详解</a></li>  <li class="file"><a href="/wiki/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Vue生命周期</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%AD%E7%9A%84data%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0/">vue中的data为什么必须是一个函数</a></li>  <li class="file"><a href="/wiki/vuex%E7%9A%84%E4%BD%BF%E7%94%A8/">vuex的使用</a></li>  <li class="file"><a href="/wiki/vue%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/">vue组件传值</a></li>  <li class="file"><a href="/wiki/vue%E8%B7%AF%E7%94%B1%E7%9A%84%E8%B7%B3%E8%BD%AC%E6%96%B9%E5%BC%8F/">vue路由的跳转方式</a></li>  <li class="file"><a href="/wiki/vue%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3%E4%BB%A3%E7%90%86%E6%96%B9%E5%BC%8F%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8%EF%BC%9F/">怎么使用？vue跨域请求接口代理方式</a></li>  <li class="file"><a href="/wiki/vue-loader%E5%B9%B2%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84/">vue-loader干什么用的</a></li>  <li class="file"><a href="/wiki/vue-cli3.0%E5%92%8Cvue-cli2.0%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E3%80%81%E8%BF%90%E8%A1%8C%E3%80%81%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4%E5%8C%BA%E5%88%AB/">vue-cli3.0和vue-cli2.0项目构建、运行、编译命令区别</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%ADwatch%E5%92%8Ccomputed/">vue中watch和computed</a></li>  <li class="file"><a href="/wiki/vue%E7%BB%84%E4%BB%B6%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/">vue组件相关问题</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%ADkeep-alive%E7%9A%84%E4%BD%9C%E7%94%A8/">vue中keep-alive的作用</a></li>  <li class="file"><a href="/wiki/vue%E4%B9%8Bv-if%E4%B8%8Ev-show%E5%8C%BA%E5%88%AB/">v-if与v-show</a></li>  <li class="file"><a href="/wiki/vue-cli%E9%A1%B9%E7%9B%AE%E4%B8%ADsrc%E7%9B%AE%E5%BD%95%E6%AF%8F%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%A8%E6%B3%95/">vue-cli项目中src目录每个文件夹和文件的用法</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%AD-route%E5%92%8C-router%E7%9A%84%E5%8C%BA%E5%88%AB/">vue中$route和$router的区别</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%AD%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/">vue中插件使用</a></li>  <li class="file"><a href="/wiki/vue%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/">vue双向绑定原理</a></li>  <li class="file"><a href="/wiki/vue-router%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E7%9A%84%E5%AE%9A%E4%B9%89/">vue-router动态路由的定义</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%ADNextTick%E6%98%AF%E5%81%9A%E4%BB%80%E4%B9%88%E7%9A%84/">vue中NextTick是做什么的</a></li>  <li class="file"><a href="/wiki/vue%E9%A1%B9%E7%9B%AE%E6%98%AF%E6%89%93%E5%8C%85%E5%8F%8A%E7%94%9F%E6%88%90%E7%9A%84%E6%96%87%E4%BB%B6/">vue项目是打包及生成的文件</a></li>  <li class="file"><a href="/wiki/vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9/">vue单页面应用的优缺点</a></li>  <li class="file"><a href="/wiki/vue%E7%9A%84%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/">vue的样式穿透</a></li>  <li class="file"><a href="/wiki/vue%E4%B8%ADkey%E7%9A%84%E4%BD%9C%E7%94%A8%E6%80%BB%E7%BB%93/">vue中key的作用总结</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            项目
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            楼市早讯
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/">头像同步及轮播</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            游乐招商
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">表单验证</a></li>  <li class="file"><a href="/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98/">所遇问题</a></li>  <li class="file"><a href="/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-axios%E5%B0%81%E8%A3%85/">楼市早讯</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            mysql
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            基础
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/Mysql-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">Mysql远程连接失败解决方案</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            优化
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E4%BC%98%E5%8C%96-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">优化-性能优化</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具
+                        </a>
+                         <ul class="unstyled" id="tree" > 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            git
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/%E5%B7%A5%E5%85%B7-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-项目-游乐招商-表单验证" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Vue/">Vue</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue/%E9%A1%B9%E7%9B%AE/">项目</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Vue/%E9%A1%B9%E7%9B%AE/%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86/">游乐招商</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Vue-%E9%A1%B9%E7%9B%AE-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/" rel="tag">Vue 项目 表单验证</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/">
+            <time datetime="2019-04-19T16:00:00.000Z" itemprop="datePublished">2019-04-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/项目-游乐招商-表单验证.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/项目-游乐招商-表单验证.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/项目-游乐招商-表单验证.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            表单验证
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81"><span class="toc-number">1.</span> <span class="toc-text">表单验证</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#-1"><span class="toc-number">1.2.</span> <span class="toc-text"></span></a></li></ol></li></ol>
+                </div>
+            
+        
+        
+            <h3 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h3><h4 id><a href="#" class="headerlink" title></a></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&#x27;login&#x27;&gt;</span><br><span class="line">     &lt;!<span class="selector-tag">--</span> 使用<span class="selector-tag">elementUI</span>组件 <span class="selector-tag">el-card</span> <span class="selector-tag">--</span>&gt;</span><br><span class="line">    &lt;el-card class=&quot;login-card&quot;&gt;</span><br><span class="line">        &lt;!<span class="selector-tag">--</span> 匿名插槽 <span class="selector-tag">--</span>&gt;</span><br><span class="line">        &lt;div  class=&#x27;title&#x27;&gt;</span><br><span class="line">            &lt;img src=&quot;../../assets/img/logo_index.png&quot; alt=&quot;&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;!-- 表单 =&gt; el-form包裹 --&gt;</span><br><span class="line">        &lt;!-- 数据校验 =&gt; el-form绑定 model ,绑定rules规则 --&gt;</span><br><span class="line">        &lt;el-form ref=&quot;myForm&quot; :model=&quot;loginForm&quot; :rules=&quot;loginRules&quot; style=&quot;margin-top:20px&quot;&gt;</span><br><span class="line">            &lt;!<span class="selector-tag">--</span> 每一个表单域由一个 <span class="selector-tag">Form-Item</span> 组件构成 <span class="selector-tag">--</span>&gt;</span><br><span class="line">            &lt;!<span class="selector-tag">--</span> <span class="selector-tag">form-item</span>  <span class="selector-tag">prop</span>属性 绑定 下面表单组件的 字段名 <span class="selector-tag">--</span>&gt;</span><br><span class="line">            &lt;el-form-item prop=&quot;mobile&quot;&gt;</span><br><span class="line">                &lt;!<span class="selector-tag">--</span> 表单域中可以放置各种类型的表单控件，包括 <span class="selector-tag">Input</span>、<span class="selector-tag">Select</span>、<span class="selector-tag">Checkbox</span>、<span class="selector-tag">Radio</span>、<span class="selector-tag">Switch</span>、<span class="selector-tag">DatePicker</span>、<span class="selector-tag">TimePicker</span> <span class="selector-tag">--</span>&gt;</span><br><span class="line">                &lt;!<span class="selector-tag">--</span> 手机号 绑定 <span class="selector-tag">v-model</span> <span class="selector-tag">--</span>&gt;</span><br><span class="line">                &lt;el-input v-model=&quot;loginForm.mobile&quot; placeholder=&quot;请输入手机号&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">            &lt;/el-form-item&gt;</span><br><span class="line">            &lt;el-form-item prop=&quot;code&quot;&gt;</span><br><span class="line">                &lt;!<span class="selector-tag">--</span> 验证码 <span class="selector-tag">--</span>&gt;</span><br><span class="line">                &lt;el-input v-model=&quot;loginForm.code&quot; placeholder=&quot;请输入验证码&quot; style=&quot;width:65%&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">                &lt;!<span class="selector-tag">--</span> 发送验证码 <span class="selector-tag">--</span>&gt;</span><br><span class="line">                &lt;el-button  style=&quot;float:right&quot;&gt;发送验证码&lt;/el-button&gt;</span><br><span class="line">            &lt;/el-form-item&gt;</span><br><span class="line">            &lt;el-form-item prop=&quot;agree&quot;&gt;</span><br><span class="line">                &lt;!<span class="selector-tag">--</span> 同意选项 <span class="selector-tag">--</span>&gt;</span><br><span class="line">                &lt;el-checkbox v-model=&quot;loginForm.agree&quot;&gt;我已阅读并同意用户协议和隐私条款&lt;/el-checkbox&gt;</span><br><span class="line">            &lt;/el-form-item&gt;</span><br><span class="line">             &lt;<span class="selector-tag">el-form-item</span>&gt;</span><br><span class="line">                 &lt;!<span class="selector-tag">--</span> 登录按钮 <span class="selector-tag">--</span>&gt;</span><br><span class="line">                 &lt;!<span class="selector-tag">--</span> 注册点击事件 <span class="selector-tag">--</span>&gt;</span><br><span class="line">                 &lt;<span class="selector-tag">el-button</span> <span class="keyword">@click</span>=&quot;login&quot;  type=<span class="string">&quot;primary&quot;</span> style=<span class="string">&quot;width:100%&quot;</span>&gt;登录&lt;/el-button&gt;</span><br><span class="line">             &lt;/el-form-item&gt;</span><br><span class="line">        &lt;/el-form&gt;</span><br><span class="line">    &lt;/el-card&gt;</span><br><span class="line"> &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">let</span> validator = <span class="function"><span class="keyword">function</span> (<span class="params">rule, value, callBack</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// rule当前规则</span></span><br><span class="line">      <span class="comment">// value当前表单项的值</span></span><br><span class="line">      <span class="comment">// callback 回调函数</span></span><br><span class="line">      <span class="comment">// 正常写法</span></span><br><span class="line">    <span class="comment">//   if (value) &#123;</span></span><br><span class="line">    <span class="comment">//     // 正确 勾选了协议</span></span><br><span class="line">    <span class="comment">//     callBack() // 一切OK请继续</span></span><br><span class="line">    <span class="comment">//   &#125; else &#123;</span></span><br><span class="line">    <span class="comment">//     // 不对 没勾选协议</span></span><br><span class="line">    <span class="comment">//     callBack(new Error(&#x27;您必须同意无条件被我们蒙骗&#x27;))</span></span><br><span class="line">    <span class="comment">//   &#125;</span></span><br><span class="line">      value ? callBack() : callBack(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;您必须同意无条件被我们蒙骗&#x27;</span>)) <span class="comment">// 炫技模式</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="comment">// 表单数据 是一个对象</span></span><br><span class="line">      loginForm: &#123;</span><br><span class="line">        mobile: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 手机号</span></span><br><span class="line">        code: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 验证码</span></span><br><span class="line">        agree: <span class="literal">false</span> <span class="comment">// 是否同意协议</span></span><br><span class="line">      &#125;,</span><br><span class="line">      loginRules: &#123;</span><br><span class="line">        <span class="comment">//   决定着校验规则  key(字段名):value(对象数组) =&gt; 一个对象就是一个校验规则</span></span><br><span class="line">        <span class="comment">// required 为true 就表示该字段必填 如果不填 就会提示消息</span></span><br><span class="line">        mobile: [&#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&#x27;请输入您的手机号&#x27;</span> &#125;,</span><br><span class="line">          &#123; <span class="attr">pattern</span>: <span class="regexp">/^1[3456789]\d&#123;9&#125;$/</span>, message: <span class="string">&#x27;请输入合法的手机号&#x27;</span> &#125;],</span><br><span class="line">        code: [&#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&#x27;请输入您的验证码&#x27;</span> &#125;,</span><br><span class="line">          &#123; <span class="attr">pattern</span>: <span class="regexp">/^\d&#123;6&#125;$/</span>, message: <span class="string">&#x27;验证码为6位数字&#x27;</span> &#125;],</span><br><span class="line">        agree: [&#123; validator &#125;]</span><br><span class="line">      &#125; <span class="comment">// 登录规则集合对象</span></span><br><span class="line">      <span class="comment">// 自定义形式去校验</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    login () &#123;</span><br><span class="line">      <span class="comment">// 校验整个表单的规则</span></span><br><span class="line">      <span class="comment">// validate 是一个方法 =&gt; 方法中传入的一个函数 两个校验参数  是否校验成功/未校验成功的字段</span></span><br><span class="line">      <span class="built_in">this</span>.$refs.myForm.validate(<span class="function"><span class="keyword">function</span> (<span class="params">isOK</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isOK) &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">&#x27;校验成功&#x27;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="-1"><a href="#-1" class="headerlink" title></a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">#### </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/Es6-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%BF%85%E5%A4%87/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Es6--工作用到的
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/vue-router%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E7%9A%84%E5%AE%9A%E4%B9%89/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">vue-router动态路由的定义</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2020 
+            <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a target="_blank" rel="noopener" href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
