@@ -129,6 +129,36 @@
   </entry>
   
   <entry>
+    <title>头像同步及轮播</title>
+    <link href="http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/"/>
+    <id>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/</id>
+    <published>2020-04-19T16:00:00.000Z</published>
+    <updated>2020-09-20T13:29:36.911Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="头像更新及carousel的使用"><a href="#头像更新及carousel的使用" class="headerlink" title="头像更新及carousel的使用"></a>头像更新及carousel的使用</h3><h4 id="头像更新–eventBus"><a href="#头像更新–eventBus" class="headerlink" title="头像更新–eventBus"></a>头像更新–eventBus</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 公共实例</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vue() <span class="comment">// 公共实例 =&gt; 实例化了一个Vue</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 认为保存成功 =&gt; 通知header组件 更新信息</span></span><br><span class="line">    eventBus.$emit(<span class="string">&#x27;updateUserInfo&#x27;</span>)</span><br><span class="line"></span><br><span class="line">   eventBus.$on(<span class="string">&#x27;updateUserInfo&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 认为别人更新了数据 自己也应该更新</span></span><br><span class="line">        <span class="built_in">this</span>.getUserInfo()</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure><h4 id="素材轮播展示–carousel"><a href="#素材轮播展示–carousel" class="headerlink" title="素材轮播展示–carousel"></a>素材轮播展示–carousel</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">carsouel</span> 是懒加载的  第一次没有弹出之前  是没有组件元素的</span><br><span class="line">即使拿到<span class="selector-tag">index</span> 也没法用，因为不知道什么时间加载完，什么时间要用</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">dialog</span> 的<span class="selector-tag">open</span> 方法， 不能用，不知道什么时间渲染完成，所以用<span class="selector-tag">opened</span></span><br><span class="line"></span><br><span class="line">轮播逻辑</span><br><span class="line"><span class="selector-tag">dialog</span> 渲染 <span class="selector-tag">list</span> 里面的数据</span><br><span class="line">点击时转存索引  通过<span class="selector-tag">opened</span>事件 用 <span class="selector-tag">ref</span>调用文档中的<span class="selector-tag">api</span> <span class="selector-tag">setActiveItem</span>（索引实现跳转）</span><br></pre></td></tr></table></figure><h4 id><a href="#" class="headerlink" title></a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">#### </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure><h4 id="-1"><a href="#-1" class="headerlink" title></a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;头像更新及carousel的使用&quot;&gt;&lt;a href=&quot;#头像更新及carousel的使用&quot; class=&quot;headerlink&quot; title=&quot;头像更新及carousel的使用&quot;&gt;&lt;/a&gt;头像更新及carousel的使用&lt;/h3&gt;&lt;h4 id=&quot;头像更新–even
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+      <category term="项目" scheme="http://yoursite.com/categories/Vue/%E9%A1%B9%E7%9B%AE/"/>
+    
+      <category term="游乐招商" scheme="http://yoursite.com/categories/Vue/%E9%A1%B9%E7%9B%AE/%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86/"/>
+    
+    
+      <category term="Vue 项目 后台管理" scheme="http://yoursite.com/tags/Vue-%E9%A1%B9%E7%9B%AE-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>楼市早讯</title>
     <link href="http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-axios%E5%B0%81%E8%A3%85/"/>
     <id>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-axios%E5%B0%81%E8%A3%85/</id>
@@ -152,36 +182,6 @@
       <category term="项目" scheme="http://yoursite.com/categories/Vue/%E9%A1%B9%E7%9B%AE/"/>
     
       <category term="游乐招商" scheme="http://yoursite.com/categories/Vue/%E9%A1%B9%E7%9B%AE/%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86/"/>
-    
-    
-      <category term="Vue 项目 后台管理" scheme="http://yoursite.com/tags/Vue-%E9%A1%B9%E7%9B%AE-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>头像同步及轮播</title>
-    <link href="http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/"/>
-    <id>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/</id>
-    <published>2020-04-19T16:00:00.000Z</published>
-    <updated>2020-09-20T10:58:46.671Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="头像更新及carousel的使用"><a href="#头像更新及carousel的使用" class="headerlink" title="头像更新及carousel的使用"></a>头像更新及carousel的使用</h3><h4 id="头像更新–eventBus"><a href="#头像更新–eventBus" class="headerlink" title="头像更新–eventBus"></a>头像更新–eventBus</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 公共实例</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vue() <span class="comment">// 公共实例 =&gt; 实例化了一个Vue</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 认为保存成功 =&gt; 通知header组件 更新信息</span></span><br><span class="line">    eventBus.$emit(<span class="string">&#x27;updateUserInfo&#x27;</span>)</span><br><span class="line"></span><br><span class="line">   eventBus.$on(<span class="string">&#x27;updateUserInfo&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 认为别人更新了数据 自己也应该更新</span></span><br><span class="line">        <span class="built_in">this</span>.getUserInfo()</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure><h4 id="素材轮播展示–carousel"><a href="#素材轮播展示–carousel" class="headerlink" title="素材轮播展示–carousel"></a>素材轮播展示–carousel</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">carsouel</span> 是懒加载的  第一次没有弹出之前  是没有组件元素的</span><br><span class="line">即使拿到<span class="selector-tag">index</span> 也没法用，因为不知道什么时间加载完，什么时间要用</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">dialog</span> 的<span class="selector-tag">open</span> 方法， 不能用，不知道什么时间渲染完成，所以用<span class="selector-tag">opened</span></span><br><span class="line"></span><br><span class="line">轮播逻辑</span><br><span class="line"><span class="selector-tag">dialog</span> 渲染 <span class="selector-tag">list</span> 里面的数据</span><br><span class="line">点击时转存索引  通过<span class="selector-tag">opened</span>事件 用 <span class="selector-tag">ref</span>调用文档中的<span class="selector-tag">api</span> <span class="selector-tag">setActiveItem</span>（索引实现跳转）</span><br></pre></td></tr></table></figure><h4 id><a href="#" class="headerlink" title></a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">#### </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br></pre></td></tr></table></figure><h4 id="-1"><a href="#-1" class="headerlink" title></a></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;头像更新及carousel的使用&quot;&gt;&lt;a href=&quot;#头像更新及carousel的使用&quot; class=&quot;headerlink&quot; title=&quot;头像更新及carousel的使用&quot;&gt;&lt;/a&gt;头像更新及carousel的使用&lt;/h3&gt;&lt;h4 id=&quot;头像更新–even
-      
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-      <category term="项目" scheme="http://yoursite.com/categories/Vue/%E9%A1%B9%E7%9B%AE/"/>
-    
-      <category term="楼市早讯" scheme="http://yoursite.com/categories/Vue/%E9%A1%B9%E7%9B%AE/%E6%A5%BC%E5%B8%82%E6%97%A9%E8%AE%AF/"/>
     
     
       <category term="Vue 项目 后台管理" scheme="http://yoursite.com/tags/Vue-%E9%A1%B9%E7%9B%AE-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86/"/>
@@ -307,34 +307,6 @@
   </entry>
   
   <entry>
-    <title>vue单页面应用的优缺点</title>
-    <link href="http://yoursite.com/wiki/vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9/"/>
-    <id>http://yoursite.com/wiki/vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9/</id>
-    <published>2019-08-30T16:00:00.000Z</published>
-    <updated>2020-08-05T09:04:06.266Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="单页面应用的优缺点-单页面的优点："><a href="#单页面应用的优缺点-单页面的优点：" class="headerlink" title="单页面应用的优缺点 单页面的优点："></a>单页面应用的优缺点 单页面的优点：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 用户体验好，快，内容的改变不需要重新加载整个页面，基于这一点spa对服务器压力较小 </span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 前后端分离 </span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 页面效果会比较炫酷（比如切换页面内容时的专场动画） </span><br></pre></td></tr></table></figure><p>单页面的缺点 </p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">1.</span> 不利于seo </span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 导航不可用，如果一定要导航需要自行实现前进、后退。（由于是单页面不能用浏览器的前进后退功能，所以需要自己建立堆栈管理） </span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 初次加载时耗时多 </span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> 页面复杂度提高很多</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;单页面应用的优缺点-单页面的优点：&quot;&gt;&lt;a href=&quot;#单页面应用的优缺点-单页面的优点：&quot; class=&quot;headerlink&quot; title=&quot;单页面应用的优缺点 单页面的优点：&quot;&gt;&lt;/a&gt;单页面应用的优缺点 单页面的优点：&lt;/h3&gt;&lt;figure class
-      
-    
-    </summary>
-    
-    
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
-    
-      <category term="基础" scheme="http://yoursite.com/categories/Vue/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="Vue 单页面应用 优缺点" scheme="http://yoursite.com/tags/Vue-%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8-%E4%BC%98%E7%BC%BA%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue的样式穿透</title>
     <link href="http://yoursite.com/wiki/vue%E7%9A%84%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/"/>
     <id>http://yoursite.com/wiki/vue%E7%9A%84%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/</id>
@@ -359,6 +331,34 @@
     
     
       <category term="Vue 样式穿透 深度作用域" scheme="http://yoursite.com/tags/Vue-%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F-%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue单页面应用的优缺点</title>
+    <link href="http://yoursite.com/wiki/vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9/"/>
+    <id>http://yoursite.com/wiki/vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9/</id>
+    <published>2019-08-30T16:00:00.000Z</published>
+    <updated>2020-08-05T09:04:06.266Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="单页面应用的优缺点-单页面的优点："><a href="#单页面应用的优缺点-单页面的优点：" class="headerlink" title="单页面应用的优缺点 单页面的优点："></a>单页面应用的优缺点 单页面的优点：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 用户体验好，快，内容的改变不需要重新加载整个页面，基于这一点spa对服务器压力较小 </span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 前后端分离 </span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 页面效果会比较炫酷（比如切换页面内容时的专场动画） </span><br></pre></td></tr></table></figure><p>单页面的缺点 </p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">1.</span> 不利于seo </span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 导航不可用，如果一定要导航需要自行实现前进、后退。（由于是单页面不能用浏览器的前进后退功能，所以需要自己建立堆栈管理） </span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 初次加载时耗时多 </span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> 页面复杂度提高很多</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;单页面应用的优缺点-单页面的优点：&quot;&gt;&lt;a href=&quot;#单页面应用的优缺点-单页面的优点：&quot; class=&quot;headerlink&quot; title=&quot;单页面应用的优缺点 单页面的优点：&quot;&gt;&lt;/a&gt;单页面应用的优缺点 单页面的优点：&lt;/h3&gt;&lt;figure class
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+      <category term="基础" scheme="http://yoursite.com/categories/Vue/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="Vue 单页面应用 优缺点" scheme="http://yoursite.com/tags/Vue-%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8-%E4%BC%98%E7%BC%BA%E7%82%B9/"/>
     
   </entry>
   
