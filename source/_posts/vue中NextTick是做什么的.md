@@ -1,0 +1,20 @@
+---
+title: vue中NextTick是做什么的
+date: 2019-07-12
+tags: Vue NextTick
+toc: true
+categories:
+- [Vue, 基础]
+---
+
+
+### NextTick 是做什么的 
+
+```
+说明： $nextTick 是在下次 DOM  更新循环结束之后执行延迟回调，在修改数据之后使用 $nextTick，  
+则可以在回调中获取更新后的 DOM。  
+
+场景： 需要在视图更新之后，基于新的视图进行操作
+使用swiper axios请求数据， 数据（图片）
+ 
+ ```

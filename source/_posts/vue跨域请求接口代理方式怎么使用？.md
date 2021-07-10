@@ -1,0 +1,28 @@
+---
+title: 怎么使用？vue跨域请求接口代理方式
+toc: true
+date: 2017-08-02 
+tags: Vue 跨域 接口代理
+categories:
+- [Vue, 基础]
+---
+
+### axios是什么？怎么使用？vue跨域请求接口代理方式？ 
+
+```js
+1. axios是什么？怎么使用 
+
+a> 下载 npm install axios --save 
+b> 引入(main.js) import axios from 'axios'; Vue.prototype.axios = axios; 
+c> 请求方式，以及传递参数 axios.get('/api/login?userName=???&userPwd=???') 
+    axios.post('/api/login',{ userName:??, userPwd:??? }) 
+
+2. 设置代理，请求接口（跨域） 
+config/index.js 
+proxyTable: { 
+	'/api':{ target:"http://localhost:8080/", 
+	changeOrigin:true, 
+	pathRewrite:{ '^/api':'static/mock' } } }
+
+	 修改了webpack的配置，一定要重启一下服务
+```
