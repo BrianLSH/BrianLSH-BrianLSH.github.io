@@ -214,7 +214,7 @@
                             &nbsp;
                             基础
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/Es6-%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1/">回调地狱</a></li>  <li class="file"><a href="/wiki/Es6-Promise/">Promise</a></li>  <li class="file"><a href="/wiki/Es6-class/">CLass</a></li>  <li class="file"><a href="/wiki/Es6-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">本地存储使用场景</a></li>  <li class="file"><a href="/wiki/Es6-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%BF%85%E5%A4%87/">Es6--工作用到的</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/Es6-%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1/">回调地狱</a></li>  <li class="file"><a href="/wiki/Es6-class/">CLass</a></li>  <li class="file"><a href="/wiki/Es6-Promise/">Promise</a></li>  <li class="file"><a href="/wiki/Es6-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">本地存储使用场景</a></li>  <li class="file"><a href="/wiki/Es6-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%BF%85%E5%A4%87/">Es6--工作用到的</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -654,110 +654,6 @@
 
 
     
-        <article id="post-Es6-Promise" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Es6/">Es6</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Es6/%E5%9F%BA%E7%A1%80/">基础</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/Es6-%E5%9F%BA%E7%A1%80-Promise/" rel="tag">Es6 基础  Promise</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/Es6-Promise/">
-            <time datetime="2018-03-28T16:00:00.000Z" itemprop="datePublished">2018-03-29</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/Es6-Promise.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/Es6-Promise.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/Es6-Promise.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/Es6-Promise/">Promise</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p><h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><h2 id="Promise-对象的状态和值"><a href="#Promise-对象的状态和值" class="headerlink" title="Promise 对象的状态和值"></a>Promise 对象的状态和值</h2><p>一个Promise对象可能处于如下<code>三种状态</code>，<br>PromiseStatus: pending | resolved | rejected<br>下面分别介绍这三种状态。</p>
-<h3 id="pending"><a href="#pending" class="headerlink" title="pending"></a><code>pending</code></h3><p>pending,”行将发生的”。相当于是一个初始状态。<br>创建Promise对象时，且没有调用ok或者是err方法，相当于是初始状态。<br>这个初始状态会随着你调用ok，<br>或者是error函数而切换到另一种状态。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">ok,err</span>)=&gt;</span>&#123; <span class="built_in">console</span>.info(<span class="string">&#x27;发呆.....&#x27;</span> )&#125;)</span><br><span class="line"><span class="built_in">console</span>.dir(p)</span><br></pre></td></tr></table></figure>
-
-<h3 id="resolved"><a href="#resolved" class="headerlink" title="resolved"></a><code>resolved</code></h3><p>创建Promise对象时，在实参函数中调用了ok方法。</p>
-<p>
-                
-            
-        
-        
-            </div>   
-            <div class="article-more-link">
-                <a href="/wiki/Es6-Promise/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
         <article id="post-Es6-class" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -849,6 +745,110 @@
             </div>   
             <div class="article-more-link">
                 <a href="/wiki/Es6-class/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-Es6-Promise" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/Es6/">Es6</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Es6/%E5%9F%BA%E7%A1%80/">基础</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Es6-%E5%9F%BA%E7%A1%80-Promise/" rel="tag">Es6 基础  Promise</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/Es6-Promise/">
+            <time datetime="2018-03-28T16:00:00.000Z" itemprop="datePublished">2018-03-29</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/Es6-Promise.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/Es6-Promise.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/Es6-Promise.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/Es6-Promise/">Promise</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><h2 id="Promise-对象的状态和值"><a href="#Promise-对象的状态和值" class="headerlink" title="Promise 对象的状态和值"></a>Promise 对象的状态和值</h2><p>一个Promise对象可能处于如下<code>三种状态</code>，<br>PromiseStatus: pending | resolved | rejected<br>下面分别介绍这三种状态。</p>
+<h3 id="pending"><a href="#pending" class="headerlink" title="pending"></a><code>pending</code></h3><p>pending,”行将发生的”。相当于是一个初始状态。<br>创建Promise对象时，且没有调用ok或者是err方法，相当于是初始状态。<br>这个初始状态会随着你调用ok，<br>或者是error函数而切换到另一种状态。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">ok,err</span>)=&gt;</span>&#123; <span class="built_in">console</span>.info(<span class="string">&#x27;发呆.....&#x27;</span> )&#125;)</span><br><span class="line"><span class="built_in">console</span>.dir(p)</span><br></pre></td></tr></table></figure>
+
+<h3 id="resolved"><a href="#resolved" class="headerlink" title="resolved"></a><code>resolved</code></h3><p>创建Promise对象时，在实参函数中调用了ok方法。</p>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/Es6-Promise/#more">Read More</a>
             </div>
         
         <footer class="article-footer">
