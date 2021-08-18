@@ -304,7 +304,7 @@
                             &nbsp;
                             基础
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/React--%E5%9F%BA%E7%A1%80%20/">react路由</a></li>  <li class="file"><a href="/wiki/React--%E7%BB%84%E4%BB%B6/">react组件</a></li>  <li class="file"><a href="/wiki/React--%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85%20/">react组件通信</a></li>  <li class="file"><a href="/wiki/React--%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E5%92%8C%E5%B0%81%E8%A3%85/">react组件通信</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/React--%E5%9F%BA%E7%A1%80%20/">react路由</a></li>  <li class="file"><a href="/wiki/React--%E7%BB%84%E4%BB%B6/">react组件</a></li>  <li class="file"><a href="/wiki/React--%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85%20/">react组件通信</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -540,116 +540,16 @@
                     
                     
                 
+                    
+                    
+                
             
         
         
             <h3 id="组件封装"><a href="#组件封装" class="headerlink" title="组件封装"></a>组件封装</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">功能相似或者形同，少写代码，提高性能，可维护性</span><br><span class="line"></span><br><span class="line">复用什么？  state及操作操作state的方法</span><br><span class="line"></span><br><span class="line">两种模式： render props 模式     高阶组件(HOC)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="组件封装-1"><a href="#组件封装-1" class="headerlink" title="组件封装"></a>组件封装</h3><h4 id="render-props模式"><a href="#render-props模式" class="headerlink" title="render props模式"></a>render props模式</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">思想：复用的是组件的状态和功能，传入的是UI要呈现的效果</span><br><span class="line">    子组件中有state数据，和操作state数据的方法，但是具体以什么样的样式呈现，要看我们传入的UI结构</span><br><span class="line">    比如传入p标签，就渲染出p标签样式，传入div，就渲染出div样式</span><br><span class="line"></span><br><span class="line">    父组件以函数形式传入UI结构，子组件在render里面调用渲染UI，同时把子组件内的数据状态传入UI结构，</span><br><span class="line">    这样就实现了复用数据状态，但是可以灵活的改变UI结构</span><br></pre></td></tr></table></figure>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
 
-
-
-
-
-
-    
-        <article id="post-React--组件通信和封装" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/React/">React</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/React/%E5%9F%BA%E7%A1%80/">基础</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" rel="tag">React组件通信</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/React--%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E5%92%8C%E5%B0%81%E8%A3%85/">
-            <time datetime="2021-07-28T16:00:00.000Z" itemprop="datePublished">2021-07-29</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/React--组件通信和封装.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/React--组件通信和封装.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/React--组件通信和封装.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/React--%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E5%92%8C%E5%B0%81%E8%A3%85/">react组件通信</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p><h3 id="React-组件通信"><a href="#React-组件通信" class="headerlink" title="React 组件通信"></a>React 组件通信</h3><h4 id="父传子–props"><a href="#父传子–props" class="headerlink" title="父传子–props"></a>父传子–props</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react 组件通信用的是props</span><br><span class="line">传递数据： 给组件标签加属性</span><br><span class="line">接收数据：函数组件用props接收数据，类组件用<span class="built_in">this</span>.props接收数据</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 子组件</span></span><br><span class="line"><span class="keyword">const</span> Func = <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 函数组建中有个默认的形参,接收外部传入的数据</span></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;我是函数组件子组件: &#123;props.msg&#125;&lt;/div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;我是类子组件</span><br><span class="line">        &lt;div&gt;&#123;<span class="built_in">this</span>.props.msg&#125;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 父组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div style=&#123;&#123; <span class="attr">border</span>: <span class="string">&#x27;1px solid red&#x27;</span>, <span class="attr">padding</span>: <span class="string">&#x27;40px&#x27;</span> &#125;&#125;&gt;</span><br><span class="line">        &lt;div&gt;组件传值&lt;/div&gt;</span><br><span class="line">        &lt;Func msg=<span class="string">&#x27;你好我是老子来的&#x27;</span> /&gt;</span><br><span class="line">        &lt;Child msg=<span class="string">&#x27;老子来了&#x27;</span>&gt;&lt;/Child&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Index</span><br></pre></td></tr></table></figure>
-
-<h4 id="props特点"><a href="#props特点" class="headerlink" title="props特点"></a>props特点</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>,props可以传递任意类型,字符串、数字、函数</span><br><span class="line"><span class="number">2</span>,props 是只读的(<span class="keyword">const</span>)的对象，无法修改</span><br><span class="line"><span class="number">3</span>, 使用类组件，如果写了构造函数，应将将props传递给<span class="built_in">super</span>，</span><br><span class="line">否则无法在构造函数中获取到props</span><br></pre></td></tr></table></figure>
-<h4 id="组件传值的几种情况"><a href="#组件传值的几种情况" class="headerlink" title="组件传值的几种情况"></a>组件传值的几种情况</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、父传子</span><br><span class="line"><span class="number">2</span>、字传父</span><br><span class="line"><span class="number">3</span>、兄弟组件传值</span><br></pre></td></tr></table></figure>
-<p>
-                
-            
-        
-        
-            </div>   
-            <div class="article-more-link">
-                <a href="/wiki/React--%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E5%92%8C%E5%B0%81%E8%A3%85/#more">Read More</a>
+<h4 id="render-props模式"><a href="#render-props模式" class="headerlink" title="render props模式"></a>render props模式</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">思想：复用的是组件的状态和功能，传入的是UI要呈现的效果</span><br><span class="line">    子组件中有state数据，和操作state数据的方法，但是具体以什么样的样式呈现，要看我们传入的UI结构</span><br><span class="line">    比如传入p标签，就渲染出p标签样式，传入div，就渲染出div样式</span><br><span class="line"></span><br><span class="line">    父组件以函数形式传入UI结构，子组件在render里面调用渲染UI，同时把子组件内的数据状态传入UI结构，</span><br><span class="line">    这样就实现了复用数据状态，但是可以灵活的改变UI结构</span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -1429,6 +1329,110 @@
             </div>   
             <div class="article-more-link">
                 <a href="/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-PHP-Laravel-CURD小结" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/PHP/">PHP</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/PHP/%E6%A1%86%E6%9E%B6/">框架</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/PHP/%E6%A1%86%E6%9E%B6/Laravel/">Laravel</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/PHP-%E6%A1%86%E6%9E%B6-Laravel/" rel="tag">PHP 框架 Laravel</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/PHP-Laravel-CURD%E5%B0%8F%E7%BB%93/">
+            <time datetime="2020-03-02T13:35:37.000Z" itemprop="datePublished">2020-03-02</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/PHP-Laravel-CURD小结.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/PHP-Laravel-CURD小结.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/PHP-Laravel-CURD小结.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/PHP-Laravel-CURD%E5%B0%8F%E7%BB%93/">Laravel-CURD小结</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h3 id="Laravel-CURD小结"><a href="#Laravel-CURD小结" class="headerlink" title="Laravel-CURD小结"></a>Laravel-CURD小结</h3><h2 id="1-curd思路设计表格式"><a href="#1-curd思路设计表格式" class="headerlink" title="1.curd思路设计表格式"></a>1.curd思路设计表格式</h2><pre><code>文章列表  id  标题， 内容，类型（类型i的）， 简介， 作者
+文章类型：1新闻，2科技，3社会，4自然，5教育</code></pre>
+<h2 id="2-建立-模型，"><a href="#2-建立-模型，" class="headerlink" title="2.建立 模型，"></a>2.建立 模型，</h2><pre><code>php artisan make:model Models\Article -a    -a 创建所有 模型 迁移表 控制器</code></pre>
+<h2 id="3-设计数据表并迁移到数据库"><a href="#3-设计数据表并迁移到数据库" class="headerlink" title="3.设计数据表并迁移到数据库"></a>3.设计数据表并迁移到数据库</h2><pre><code> 在database/migrate   文件夹    php artisan migrate(在数据库生成一个数据表)</code></pre>
+<h2 id="4-设计数据表的模拟数据格式，生成模拟数据"><a href="#4-设计数据表的模拟数据格式，生成模拟数据" class="headerlink" title="4.设计数据表的模拟数据格式，生成模拟数据"></a>4.设计数据表的模拟数据格式，生成模拟数据</h2><pre><code>方法一
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/PHP-Laravel-CURD%E5%B0%8F%E7%BB%93/#more">Read More</a>
             </div>
         
         <footer class="article-footer">
