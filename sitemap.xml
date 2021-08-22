@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/React--%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
+    
+    <lastmod>2021-08-22T03:34:40.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/wiki/React--%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85%20/</loc>
+    
+    <lastmod>2021-08-22T03:24:48.451Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/wiki/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
     
     <lastmod>2021-08-21T14:08:27.462Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/wiki/React--%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
-    
-    <lastmod>2021-08-18T11:54:26.002Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/wiki/React--%E8%B7%AF%E7%94%B1/</loc>
     
     <lastmod>2021-08-18T10:32:24.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/wiki/React--%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85%20/</loc>
-    
-    <lastmod>2021-08-18T07:22:53.444Z</lastmod>
     
   </url>
   
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/</loc>
+    <loc>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-axios%E5%B0%81%E8%A3%85/</loc>
     
     <lastmod>2021-07-10T15:20:00.420Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-axios%E5%B0%81%E8%A3%85/</loc>
+    <loc>http://yoursite.com/wiki/%E9%A1%B9%E7%9B%AE-%E6%B8%B8%E4%B9%90%E6%8B%9B%E5%95%86-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%90%8C%E6%AD%A5/</loc>
     
     <lastmod>2021-07-10T15:20:00.420Z</lastmod>
     
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/wiki/vue%E4%B8%ADkeep-alive%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
+    <loc>http://yoursite.com/wiki/vue%E4%B8%ADwatch%E5%92%8Ccomputed/</loc>
     
     <lastmod>2021-07-10T15:20:00.401Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/wiki/vue%E4%B8%ADwatch%E5%92%8Ccomputed/</loc>
+    <loc>http://yoursite.com/wiki/vue%E4%B8%ADkeep-alive%E7%9A%84%E4%BD%9C%E7%94%A8/</loc>
     
     <lastmod>2021-07-10T15:20:00.401Z</lastmod>
     
